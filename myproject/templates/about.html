@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About</title>
+    <link rel="stylesheet" href={% static 'css/style.css' %} />
+    <script src={% static 'js/main.js' %} defer></script>
+
+  </head>
+  <body>
+    <main>
+      <h1>Welcome to About Page</h1>
+      <p>Checkout my home page <a href="/">Home</a></p>
+    </main>
+
+
+    {% comment %} <script src={% static 'js/main.js' %}></script> {% endcomment %}
+  </body>
+</html>

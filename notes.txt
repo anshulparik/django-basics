@@ -1,0 +1,58 @@
+=> To check version:
+py --version
+
+=> To create virtual env:
+py -m venv .venv
+
+=> To activate virtual env:
+source .venv/Scripts/activate
+- For Linux/Mac:  source .venv/bin/activate
+
+=> To deactivate virtual env:
+deactivate
+
+=> To install django:
+py -m pip install Django
+
+=> To update pip:
+py -m pip install -U pip
+
+=> To open a REPL for python:
+py
+
+=> To check django version:
+>>> import django
+>>> print(django.get_version())
+
+=> To quit a REPL for python:
+quit()
+
+=> To create django project:
+django-admin startproject myproject
+
+=> To start the django server:
+cd myproject
+py manage.py runserver 5000                                
+
+NOTE: 
+- default port is 8000.
+- After running server for the first time, it will create _pycache_ directory and db.sqlite3 file.
+- _pycache_ helps in to serve our project faster.
+
+
+=> To create basic routes:
+- We create urls for our routes in urls.py.
+- To setup the view we create views.py file.
+- In views we create service function (that sends response (business logic)).
+- Then we link these service function to out urls.
+
+=> To setup HTML templates (view templates):
+- For this we create templates folder.
+- Then creates templates.
+- Inside settings.py file in TEMPLATES add templates folder name in DIR key.
+- Then in views.py file add use render method to render html files.
+
+=> To setup styles and JS:
+- For this we create static folder. 
+- Then in seetings.py file import os and then setup STATICFILES_DIRS.
+- Then load the static folder in HTML files.

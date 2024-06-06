@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Home</title>
-    <link rel="stylesheet" href={% static 'css/style.css' %} />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <main>
-      <h1>Welcome to Home Page</h1>
-      <p>Checkout my about page <a href="/about">About</a></p>
-    </main>
-  </body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+
+{% block content %}
+  <h1>Welcome to Home Page</h1>
+  <p>Checkout my about page <a href="/about">About</a></p>
+{% endblock  %}

@@ -17,3 +17,36 @@ py manage.py startapp posts
 => For urls:
 - We will create new urls.py file in our app(posts) directory.
 - Then we will register this app urls.py in our main(projects) urls.py.
+
+
+
+=> Steps to create new template which can be used in all the pages:
+- For this we will create layout.html
+- Then load the static assets:
+  {% load static %}
+
+- In head:  
+    <link rel="stylesheet" href={% static 'css/style.css' %} />
+    <script src={% static 'js/main.js' %} defer></script>
+
+- For dynamic insertion: 
+  {% block title %}
+    Django App
+  {% endblock %}
+
+NOTE: Here if title is not passed dynamically then Django App will be default title.
+
+- Now in homme.html we will layout.html
+    {% extends "layout.html" %}
+
+    {% block title %}
+    Home
+    {% endblock %}
+
+
+    {% block content %}
+    <h1>Welcome to Home Page</h1>
+    <p>Checkout my about page <a href="/about">About</a></p>
+    {% endblock  %}
+
+NOTE: Here we are extending layout file and passing the title and content dynamically.

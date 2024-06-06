@@ -50,6 +50,7 @@ NOTE:
 - For this we create templates folder.
 - Then creates templates.
 - Inside settings.py file in TEMPLATES add templates folder name in DIR key.
+NOTE: This is for the complete project including all apps (templates directory).
 - Then in views.py file add use render method to render html files.
 
 => To setup styles and JS:

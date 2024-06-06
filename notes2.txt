@@ -1,0 +1,19 @@
+- Previously we generated django project.
+- Here we will generate django app.
+- App should be modular, we might have different parts of larger prjects broken into apps.
+- These modular apps can be taken out from one django project and can be used in another
+  django project.
+
+
+=> To create an app:
+py manage.py startapp posts
+
+=> To link our app with our project:
+- In settings.py in INSTALLED_APPS add posts.
+
+=> Templates for app:
+- For this we will create new templates folder in our app(posts) directory.
+
+=> For urls:
+- We will create new urls.py file in our app(posts) directory.
+- Then we will register this app urls.py in our main(projects) urls.py.

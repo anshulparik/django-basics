@@ -1,0 +1,39 @@
+=> Models
+- We create models in models.py file in our app(posts).
+- These models are in the form of classes.
+- Then these models gets migrated and becomes tables in database.
+
+NOTE: The warning which we receive in terminal when we run our app is because django has some
+built in models and we need to migrate them. To migrate them:
+- py manage.py migrate 
+
+=> To migrate our custom created model(Post):
+- py manage.py makemigrations
+- py manage.py migrate             // to apply migrations
+
+
+
+=> Django ORM
+
+=> To move into the shell:
+- py manage.py shell
+
+=> To import models
+from posts.models import Post
+
+=> To create instance of a model:
+p = Post()
+
+=> To save post in Post model:
+p.title = "My first Post!"
+
+=> To save it to database"
+p.save()
+
+=> To retreive all the posts from the database:
+Post.objects.all()
+
+=> To exit the shell:
+exit()
+
+NOTE: We can create function(method) inside our model class.

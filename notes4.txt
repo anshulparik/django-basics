@@ -1,0 +1,28 @@
+=> Django Admin
+- Admin URL is already there in main urls.py by default.
+- From this admin url, we can log into django administration.
+- To login into django administration we need creds of superuser.
+
+=> To create superuser creds:
+- py manage.py createsuperuser
+  - username: anshul
+  - password: test@123
+
+
+- In users if staff status is true, that user can access django administration panel.
+- We can use django administration panel as a CMS as well.
+- For that we need to import our model in our apps admin.py file.
+- This will show our model into django administration panel, from there we can manage our data.
+
+
+NOTE: We can pass data from view to template.
+
+=> To pass data from views(route) to template:
+def posts_list(request):
+    posts = Post.objects.all()
+    return render(request, 'posts/posts_list.html', { 'posts': posts })
+
+
+=> To access data from views(route) in template:
+    {% for post in posts %}
+    {% endfor %}

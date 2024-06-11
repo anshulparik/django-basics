@@ -1,0 +1,22 @@
+=> To create named url:
+- In apps urls.py:
+urlpatterns = [
+    path('', views.posts_list, name='posts'),
+]
+
+- In template(layout.html) to use that url:
+<a href={% url 'posts' %}>📰</a>
+
+=> Dynamic path using slug:
+path('<slug:slug>', views.post_page, name='page')
+
+=> To create slug link in template:
+<a href="{% url 'page' slug=post.slug %}"> LINK </a>
+
+
+
+=> To separate app based routing:
+
+- Declare app_name = 'posts' in urls.py.
+- Use it like:
+<a href={% url 'posts:list' %}>📰</a>

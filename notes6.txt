@@ -19,3 +19,10 @@ banner = models.ImageField(default='fallback.png', blank=True)
 => Then we will migrate our model:
 - py manage.py makemigrations
 - py manage.py migrate
+
+=> To display images
+<img 
+    class="banner" 
+    src="{{ post.banner.url }}" 
+    alt="{{ post.title }}" 
+/>

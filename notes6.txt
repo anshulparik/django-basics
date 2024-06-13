@@ -1,0 +1,21 @@
+=> File upload
+
+- In main settings.py file we need to define media url and folder path:
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path(BASE_DIR, 'media')
+
+- In main urls.py file add:
+from django.conf.urls.static import static
+from django.conf import settings
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+=> To work with images, we need one additional library:
+- pip install Pillow
+
+=> To save images in DB, we need to add an extra field to our model:
+banner = models.ImageField(default='fallback.png', blank=True)
+
+=> Then we will migrate our model:
+- py manage.py makemigrations
+- py manage.py migrate
